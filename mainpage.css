@@ -31,7 +31,7 @@ h2{
     font-size: 30px;
 
 }
-/*NAVIGATIONSBAR*/
+/*--------------------------------NAVIGATIONSBAR--------------------------------------*/
 nav{
     align-items: center;
     padding-top: 30px;
@@ -53,8 +53,8 @@ nav{
 .nav:hover{
     color: var(--farbe5);
 }
-/*---------------------------------------------------------------------------*/
-/*ÜBER MICH*/
+/*------------------------------------ÜBER MICH---------------------------------------*/
+
 #ueM{
         font-size: 2rem;
         margin-top: 10%;
@@ -103,8 +103,8 @@ nav{
     
 }
 
-/*------------------------------------------------------------------------*/
-/*BÜCHER*/
+/*----------------------------------BÜCHER--------------------------------------*/
+
 .Buch{
     
     background-color: rgb(217, 103, 4,0.3);
@@ -122,17 +122,140 @@ nav{
 .BuchBild{
 
     align-self: center;
-    width:60%;
+    width:100%;
+    cursor: pointer;
+    
 
 }
+.imgContainer{
+    width:60%;
+    height: auto;
+    background-color: rgb(217, 103, 4,0.05);
+    padding: 10px;
+}
+.imgContainer:hover{
+    background-color: #BF4904;
+}
+
 
 .txt{
     
-    font-size: auto;
+    font-size: 1.2rem;
 }
 
-/*----------------------------------------------------------------------------------*/
-/*ALTERNATIVE BILDSCHIRMGROEßEN*/
+.tooltip {
+    position: absolute;       /* Tooltip schwebt über der Seite */
+    background: var(--farbe1);         /* dunkler Hintergrund */
+    color:var(--farbe5);             /* Textfarbe */
+    padding: 6px 10px;        /* Platz um den Text */
+    border-radius: 5px;       /* abgerundete Ecken */
+    font-size: 14px;
+
+    pointer-events: none;     /* verhindert Hover-Probleme */
+    opacity: 0;               /* unsichtbar beim Start */
+    transition: opacity 0.2s; /* weiches Ein- und Ausblenden */
+}
+
+.overlay{
+        position: fixed;
+        inset: 1em;
+        background: rgba(0, 0, 0, 0.5);  /* Abdunkelung */
+        border-radius: 10px;
+        display: none;            /* unsichtbar, bis es geöffnet wird */
+        justify-content: center;  /* Modal mittig horizontal */
+        align-items: center;      /* Modal mittig vertikal */
+        
+        z-index: 9999;   
+        
+    }
+.modal {
+        background-color:#fff6d0;
+        color: var(--farbe1);
+        padding:10px;
+        
+        border-radius: 10px;
+
+        width: 90%;
+        height: 90%;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+
+        grid-template-columns: 100%;
+        grid-template-rows: 20% 50% 7% 50% 1% 10%;
+        /*gap:1em;*/
+
+        grid-template-areas: 
+            'box1'
+            'box2'
+            'boxz'
+            'box3'
+            'box4'
+            'box5'
+            ;
+
+        z-index: 10000;           /* höher als overlay (optional) */
+        overflow-y: auto;
+    
+    }
+
+    /*---------------------------------------------MODAL-----------------------------------*/
+    .gridbox{
+        /*background-color: yellow;*/
+        display:flex;
+        justify-content: center;
+        
+        border-radius: 10px;
+        
+        padding: 20px;
+       
+    }
+
+    
+    
+   
+    
+    #modal-cover{
+        width:100%;
+        max-width: 350px;
+        height: auto;
+
+    }
+    #modal-beschreibung{
+        
+        width: 90%;
+    
+        font-size: 3vw;
+        line-height: 4vw;
+        
+
+    }
+
+
+
+
+
+
+
+
+/*----------------------------KONTAKTBOX-------------------------------------*/
+
+#Kontaktbox{
+    background-color: var(--farbe3);
+    height: 500px;
+    margin-bottom: 10px;
+    padding: 20px;
+
+}
+
+#Kontaktaufnahme{
+    width: 20%;
+}
+
+
+
+/*-----------------------------------ALTERNATIVE BILDSCHIRMGROEßEN-----------------------------------------------*/
+
 
 
 @media (min-width: 800px){
@@ -197,15 +320,83 @@ nav{
         padding-left: 25px;
         padding-right: 10px;
 
-        font-size: 1.2rem;;
+        font-size: 1.5rem;;
     }
     .BuchBild{
-        max-width:30%;
+        max-width:100%;
         height: auto;
     }
+    .imgContainer{
+        width: 30%;
+    }
 
+    #Buch2,#Buch4{
+        flex-direction: row-reverse;
+    }
+
+    .modal {
+    
+    /*background-color: #663D5B;
+    color:rgba(255, 235, 205, 0.672);*/
+    justify-content: center;
+    grid-template-columns: 33% 30% 20%;
+    grid-template-rows: 20% 5% 40% 10% 20%;
+    gap:0.5em;
+    grid-template-areas: 
+        'box1 box1 box1'
+        'box2 boxz boxz'
+        'box2 box3 box3'
+        'box4 box4 box4'
+        'box5 box5 box5'
+        ;
+
+    }
 
     
+
+    /*---------------------------------------------MODAL-----------------------------------*/
+    .gridbox{
+        align-items: center;
+        padding: 20px;
+        
+        /*background-color: rgba(182, 169, 215, 0.4);*/
+        /*border-radius: 10px;*/
+        
+    }
+    
+
+    #modal-cover{
+        width:100%;
+        max-width: 320px;
+
+        height: auto;
+
+    }
+    #modal-beschreibung{
+        
+        width: 100%;
+        align-self:baseline;
+        font-size: 1em;
+        line-height: 1.3em;
+        
+    }
+
+    
+    /*-----------------------KONTAKT-----------------------*/
+    
+    #Kontaktbox{
+
+        display: flex;
+        justify-content: center;
+        
+    }
+    
+    #Kontaktaufnahme{
+    width: 10%;
+    }
+    #Kontakttext{
+        width: 60%
+    }
 
             
 
@@ -224,6 +415,23 @@ nav{
     }
     .txt{
     font-size: 1.2rem;
+    }
+
+    .modal {
+   
+        grid-template-columns: 400px 30% 20%;
+    
+    
+    }
+    #modal-beschreibung{
+        
+        width: 90%;
+    
+        font-size: 1.1em;
+        line-height: 1.4em;
+    
+    
+
     }
     
 }
