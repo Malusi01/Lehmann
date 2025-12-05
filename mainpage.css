@@ -169,20 +169,21 @@ nav{
         
     }
 .modal {
-        background-color:#fff6d0;
-        color: var(--farbe1);
+        
+        
         padding:10px;
         
         border-radius: 10px;
-
+        padding-top: 20px;
         width: 90%;
         height: 90%;
         display: grid;
         justify-content: center;
-        align-content: center;
+        align-content: top;
 
         grid-template-columns: 100%;
-        grid-template-rows: 20% 50% 7% 50% 1% 10%;
+        
+        
         /*gap:1em;*/
 
         grid-template-areas: 
@@ -197,6 +198,22 @@ nav{
         z-index: 10000;           /* höher als overlay (optional) */
         overflow-y: auto;
     
+    }
+    #modal1{
+        background-color:#663D5B;
+        color: rgba(255, 235, 205, 0.77);
+        grid-template-rows: 20% 50% 7% 50% 1% 10%;
+    }
+    #modal2{
+        background-color:#1c2d18;
+        color: #371A09;
+        grid-template-rows: 20% 50% 7% 50% 1% 10%;
+    }
+    #modal3{
+
+    }
+    #modal4{
+
     }
 
     /*---------------------------------------------MODAL-----------------------------------*/
@@ -340,7 +357,7 @@ nav{
     color:rgba(255, 235, 205, 0.672);*/
     justify-content: center;
     grid-template-columns: 33% 30% 20%;
-    grid-template-rows: 20% 5% 40% 10% 20%;
+    
     gap:0.5em;
     grid-template-areas: 
         'box1 box1 box1'
@@ -351,8 +368,30 @@ nav{
         ;
 
     }
+    #modal1{
+        grid-template-rows: 20% 5% 40% 10% 20%;
+        
+        
+    }
 
-    
+    #modal2{
+        grid-template-columns: 35% 30% 30%;
+        grid-template-rows: 20% 7% 60% 10% 20%;
+        grid-template-areas: 
+        'box1 box1 box1'
+        'boxz boxz boxz'
+        'box2 box3 box3'
+        'box4 box4 box4'
+        'box5 box5 box5'
+        ;
+
+    }
+    #modal2box2{
+        align-items: center;
+    }
+    #modal3{
+
+    }
 
     /*---------------------------------------------MODAL-----------------------------------*/
     .gridbox{
@@ -416,23 +455,30 @@ nav{
     .txt{
     font-size: 1.2rem;
     }
-
     .modal {
    
         grid-template-columns: 400px 30% 20%;
     
     
     }
+    #modal2{
+        grid-template-columns: 20% 30% 30%;
+        grid-template-rows: 20% 7% 50% 10% 20%;
+    }
+
     #modal-beschreibung{
         
         width: 90%;
     
         font-size: 1.1em;
         line-height: 1.4em;
-    
-    
 
     }
+    #modal2box2{
+        align-items: baseline;
+    }
+    
+   
     
 }
 

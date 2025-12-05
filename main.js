@@ -50,10 +50,6 @@ buch1.addEventListener("click", async () => {
     modal1.innerHTML = html; // ins Modal einsetzen
     ol1.style.display = "flex";
 
-    modal1.style.backgroundColor ="#663D5B";
-    modal1.style.color = "rgba(255, 235, 205, 0.77)";
-   
-    
     modal1.querySelectorAll(".gridbox").forEach(el => {
     el.style.backgroundColor = "rgba(207,168,160,0.3)";
     });
@@ -72,14 +68,15 @@ buch2.addEventListener("click", async () => {
     modal2.innerHTML = html; // ins Modal einsetzen
     ol2.style.display = "flex";
 
-    modal2.style.backgroundColor ="#663D5B";
-    modal2.style.color = "rgba(255, 235, 205, 0.77)";
+    
    
     const gridbox = modal2.querySelectorAll(".gridbox")
     gridbox.forEach(el => {
-    el.style.backgroundColor = "rgba(207,168,160,0.3)";
+    el.style.backgroundColor = "#fca000ff";
     });
     gridbox[0].style.display = "grid";
+    
+
     
     
 
@@ -93,8 +90,7 @@ buch3.addEventListener("click", async () => {
     modal3.innerHTML = html; // ins Modal einsetzen
     ol3.style.display = "flex";
 
-    modal3.style.backgroundColor ="#663D5B";
-    modal3.style.color = "rgba(255, 235, 205, 0.77)";
+
    
     
     modal3.querySelectorAll(".gridbox").forEach(el => {
@@ -122,16 +118,19 @@ buch4.addEventListener("click", async () => {
     el.style.backgroundColor = "rgba(207,168,160,0.3)";
     });
     
-
-    
-
 });
 
 
 // schließen
 document.addEventListener("click", (e) => {
     if (e.target.id === "closeModal") {
-        overlay.style.display = "none";
+        ol1.style.display = "none";
+        ol2.style.display = "none";
+        ol3.style.display = "none";
+        ol4.style.display = "none";
+
     }
 });
+
+
 
