@@ -18,6 +18,7 @@ const ol3 = document.getElementById("overlay3");
 const ol4 = document.getElementById("overlay4");
 
 
+
 imgages.forEach( img =>{
 /* Wird ausgelöst, wenn die Maus über dem Bild bewegt wird */
 img.addEventListener("mousemove", (e) => {
@@ -39,6 +40,20 @@ img.addEventListener("mouseleave", () => {
 
 
 
+function goToWebsite(which, book){
+    if (which === "amazon" && book === "1"){
+        
+        window.open("https://www.amazon.de/Dein-Vater-hat-gesessen-Nachkriegszeit/dp/3746006481")
+    }
+    else if (which === "thalia"){
+        window.open("https://www.thalia.de/shop/home/artikeldetails/A1048841538")
+    }
+    else{
+        window.open("https://buchshop.bod.de/dein-vater-hat-gesessen-lore-i-lehmann-9783746006482")
+    }
+    
+}
+
 
 
 buch1.addEventListener("click", async () => {
@@ -52,7 +67,9 @@ buch1.addEventListener("click", async () => {
 
     modal1.querySelectorAll(".gridbox").forEach(el => {
     el.style.backgroundColor = "rgba(207,168,160,0.3)";
+
     });
+    
     
 
     

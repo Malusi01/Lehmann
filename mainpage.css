@@ -56,9 +56,9 @@ nav{
 /*------------------------------------ÜBER MICH---------------------------------------*/
 
 #ueM{
-        font-size: 2rem;
-        margin-top: 10%;
-        margin-bottom: 0px;
+    font-size: 2rem;
+    margin-top: 10%;
+    margin-bottom: 0px;
     }
 #UeberMichContainer{
     margin-top: 0px;
@@ -170,88 +170,161 @@ nav{
     }
 .modal {
         
-        
-        padding:10px;
-        
-        border-radius: 10px;
-        padding-top: 20px;
-        width: 90%;
-        height: 90%;
-        display: grid;
-        justify-content: center;
-        align-content: top;
-
-        grid-template-columns: 100%;
-        
-        
-        /*gap:1em;*/
-
-        grid-template-areas: 
-            'box1'
-            'box2'
-            'boxz'
-            'box3'
-            'box4'
-            'box5'
-            ;
-
-        z-index: 10000;           /* höher als overlay (optional) */
-        overflow-y: auto;
+    padding:10px;
     
-    }
-    #modal1{
-        background-color:#663D5B;
-        color: rgba(255, 235, 205, 0.77);
-        grid-template-rows: 20% 50% 7% 50% 1% 10%;
-    }
-    #modal2{
+    border-radius: 10px;
+    padding-top: 20px;
+    width: 90%;
+    height: 90%;
+    display: grid;
+    justify-content: center;
+    align-content: start;
+
+    grid-template-columns: 100%;
+    
+    
+    /*gap:1em;*/
+
+    grid-template-areas: 
+        'box1'
+        'box2'
+        'box3'
+        'box4'
+        'box5'
+        'box6'
+        ;
+
+    z-index: 10000;           /* höher als overlay (optional) */
+    overflow-y: auto;
+    
+}
+
+#modal1{
+    background-color:#663D5B;
+    color: rgba(255, 235, 205, 0.77);
+    /*grid-template-rows: 20% 50% 7% 50% 1% 10%;*/
+}
+#modal2{
+    background-color:#1c2d18;
+    color: #371A09;
+    /*grid-template-rows: 20% 50% 50% 1% 10%;*/
+}
+#modal3{
         background-color:#1c2d18;
-        color: #371A09;
-        grid-template-rows: 20% 50% 7% 50% 1% 10%;
-    }
-    #modal3{
+    color: #371A09;
+    grid-template-rows: 20% 50% 50% 1% 10%;
+}
+#modal4{
+        background-color:#1c2d18;
+    color: #371A09;
+    grid-template-rows: 20% 50% 50% 1% 10%;
+}
+button{
 
-    }
-    #modal4{
-
-    }
-
-    /*---------------------------------------------MODAL-----------------------------------*/
-    .gridbox{
-        /*background-color: yellow;*/
-        display:flex;
-        justify-content: center;
-        
-        border-radius: 10px;
-        
-        padding: 20px;
-       
+    padding: 17px 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 0;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all 0.5s ease;
     }
 
+button:hover {
+    letter-spacing: 3px;
+    background-color: hsl(261deg 80% 48%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+}
+
+button:active {
+    letter-spacing: 3px;
+    background-color: hsl(261deg 80% 48%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
+}
+.buttonb1{
+    background-color: rgba(255, 235, 205, 0.77);
+}
+
+#closeModal{
+    padding: 10px 10px;
+    background-color: #b19888;
+    align-content: end;
+}
+/*---------------------------------------------MODAL-----------------------------------*/
+.gridbox{
+    /*background-color: yellow;*/
+    display:flex;
+    justify-content: center;
+    height: fit-content;
+    border-radius: 10px;
+
+    padding: 20px;
+    margin: 5px;
     
+}
+
+#modal-title{
+    font-size: 1.4em;
+    line-height: 1.4em;
+}   
+
+#modal-cover{
+    min-width: 200px;
+    max-width: 300px;
+    height: auto;
+    display:block;
+    align-self: center;
+
+}
+#modal-cover2{
+    min-width: 200px;
+    max-width: 300px;
+    height: auto;
+    display:block;
+    align-self: center;
+
+}
+
+
+#modal-beschreibung1{
     
-   
+    width: 90%;
+
+    font-size: 1.3em;
+    line-height: 1.2em;
     
-    #modal-cover{
-        width:100%;
-        max-width: 350px;
-        height: auto;
 
-    }
-    #modal-beschreibung{
-        
-        width: 90%;
+}
+#modal-beschreibung2{
     
-        font-size: 3vw;
-        line-height: 4vw;
-        
+    width: 90%;
 
-    }
+    font-size: 1.3em;
+    line-height: 1.2em;
+    
 
-
-
-
-
+}
+#Buchinfos{
+    display: grid;
+    
+    gap: 5px;
+    justify-content: center;
+    grid-template-areas: 
+    'p1'
+    'p2' 
+    'p3'
+    'p4';
+}
+#schliessenb{
+    background-color: rgba(255, 255, 255, 0); 
+}
 
 
 
@@ -322,6 +395,8 @@ nav{
     /*BÜCHER*/
 
     .Buch{
+        width: 90%;
+        height: 90%;
         margin:10px;
         padding: 20px;
         background-color: rgb(217, 103, 4,0.3);
@@ -331,7 +406,6 @@ nav{
       
     }
     .txt{
-        
         padding-top: 10px;
         padding-bottom: 10px;
         padding-left: 25px;
@@ -353,51 +427,42 @@ nav{
 
     .modal {
     
-    /*background-color: #663D5B;
-    color:rgba(255, 235, 205, 0.672);*/
-    justify-content: center;
-    grid-template-columns: 33% 30% 20%;
-    
-    gap:0.5em;
-    grid-template-areas: 
-        'box1 box1 box1'
-        'box2 boxz boxz'
-        'box2 box3 box3'
-        'box4 box4 box4'
-        'box5 box5 box5'
-        ;
+        /*background-color: #663D5B;
+        color:rgba(255, 235, 205, 0.672);*/
+        justify-content: center;
+        grid-template-columns: 33% 30% 20%;
+        grid-template-rows: 20% 5% 40% auto 40% auto;
+        width: 90%;
+        height: 90%;
+        gap:0.5em;
+        grid-template-areas: 
+            'box1 box1 box1'
+            'box2 box3 box3'
+            'box2 box3 box3'
+            'box4 box4 box4'
+            'box5 box5 box5'
+            'box6 box6 box6'
+            ;
 
     }
-    #modal1{
-        grid-template-rows: 20% 5% 40% 10% 20%;
-        
-        
+    /*#modal1{
+        grid-template-rows: 20% 5% 40% auto 40% auto;
+            
     }
 
     #modal2{
-        grid-template-columns: 35% 30% 30%;
-        grid-template-rows: 20% 7% 60% 10% 20%;
-        grid-template-areas: 
-        'box1 box1 box1'
-        'boxz boxz boxz'
-        'box2 box3 box3'
-        'box4 box4 box4'
-        'box5 box5 box5'
-        ;
-
+        grid-template-rows: 20% 5% 40% auto 40% auto;
+        
     }
     #modal2box2{
         align-items: center;
-    }
-    #modal3{
-
-    }
-
+    }*/
+    
     /*---------------------------------------------MODAL-----------------------------------*/
     .gridbox{
         align-items: center;
         padding: 20px;
-        
+        height: auto;
         /*background-color: rgba(182, 169, 215, 0.4);*/
         /*border-radius: 10px;*/
         
@@ -405,21 +470,38 @@ nav{
     
 
     #modal-cover{
-        width:100%;
-        max-width: 320px;
-
+        min-width:90%;
+        max-width: 270px;
         height: auto;
 
     }
-    #modal-beschreibung{
+    #modal-beschreibung1{
         
         width: 100%;
+        height: 90%;
         align-self:baseline;
-        font-size: 1em;
-        line-height: 1.3em;
+        font-size: 0.9em;
+        line-height: 1.5em;
         
     }
-
+    #modal-beschreibung2{
+        
+        width: 100%;
+        height: 90%;
+        align-self:baseline;
+        font-size: 0.9em;
+        line-height: 1.5em;
+        
+    }
+    #Buchinfos{
+       
+        align-items: center;
+        height: fit-content;
+        grid-template-columns: 30% 30% 30%;
+        grid-template-areas: 
+        'p2 p3 p4';
+    }
+    
     
     /*-----------------------KONTAKT-----------------------*/
     
@@ -431,7 +513,7 @@ nav{
     }
     
     #Kontaktaufnahme{
-    width: 10%;
+        width: 10%;
     }
     #Kontakttext{
         width: 60%
@@ -441,19 +523,21 @@ nav{
 
 }
 
+
+
 @media (min-width: 1200px){
     .nav{
-    padding-right: 10%;
-    padding-left: 10%;
-    font-size: 30px;
+        padding-right: 10%;
+        padding-left: 10%;
+        font-size: 30px;
 
     }
     h1{
-    padding-top: 100px;
-    font-size: 60px;
+        padding-top: 100px;
+        font-size: 60px;
     }
     .txt{
-    font-size: 1.2rem;
+        font-size: 1.2rem;
     }
     .modal {
    
@@ -465,8 +549,12 @@ nav{
         grid-template-columns: 20% 30% 30%;
         grid-template-rows: 20% 7% 50% 10% 20%;
     }
+    #modal-cover{
 
-    #modal-beschreibung{
+        min-width:70%;
+
+    }
+    #modal-beschreibung1{
         
         width: 90%;
     
