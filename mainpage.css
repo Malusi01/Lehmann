@@ -9,11 +9,34 @@
     
 
 }
+
+
+@font-face {
+  font-family: 'Ranade-Light';
+  src: url('resources/fonts/ranade/Ranade-Light.woff2') format('woff2'),
+       url('resources/fonts/ranade/Ranade-Light.woff') format('woff'),
+       url('resources/fonts/ranade/Ranade-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ranade-Medium';
+  src: url('resources/fonts/ranade/Ranade-Medium.woff2') format('woff2'),
+       url('resources/fonts/ranade/Ranade-Medium.woff') format('woff'),
+       url('resources/fonts/ranade/Ranade-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+
 body {
     background-color: var(--farbe4);
     color: var(--farbe1);
     margin:0px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family:'Ranade-Light';
 }
 header {
     
@@ -22,13 +45,15 @@ header {
    
 }
 h1{
+    font-family:'Ranade-Medium';
     padding-top: 120px;
     padding-bottom: 40px;
-    font-size: 30px;
+    
 }
 h2{
+    font-family:'Ranade-Medium';
     text-align: center;
-    font-size: 30px;
+    font-size: 1.5rem;
 
 }
 /*--------------------------------NAVIGATIONSBAR--------------------------------------*/
@@ -42,8 +67,10 @@ nav{
     /*backdrop-filter: blur(8px);*/
     position: fixed;
     top:0;
+    z-index: 1000;
     
 }
+
 .nav{
     padding-right: 5%;
     padding-left: 5%;
@@ -53,10 +80,14 @@ nav{
 .nav:hover{
     color: var(--farbe5);
 }
+section {
+  scroll-margin-top: 200px; /* Höhe deiner Navbar */
+}
+
 /*------------------------------------ÜBER MICH---------------------------------------*/
 
 #ueM{
-    font-size: 2rem;
+    /*font-size: 2rem;*/
     margin-top: 10%;
     margin-bottom: 0px;
     }
@@ -93,19 +124,61 @@ nav{
 
 }
 #text{
+    font-size: 1.5rem;
+    line-height: 1.5em;
     justify-items: center;
 }
 
 .ueMichTxt{
-    
+    font-family:'Ranade-Medium';
     font-weight: bold;
     font-size:1rem;
     
 }
+/*-----------------------------------AUTORIN-----------------------------------------------*/
+#Autorin{
+    background-color: var(--farbe4);
+    height: fit-content;
+    margin: 30px;
+    border: 2px solid var(--farbe2);
+    border-radius: 15px;
+    padding: 20px;
+}
+#biografie{
+    
+    font-size: 1.2rem;
+    line-height: 1.5em;
+    padding: 20px;
+}
 
 /*----------------------------------BÜCHER--------------------------------------*/
 
-.Buch{
+#buecherContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    width: 100%;
+    
+    
+}
+.imgContainer2{
+    
+    margin:20px;
+    padding: 10px;
+    background-color: rgb(217, 103, 4,0.3);
+
+}
+.imgContainer2:hover{
+    background-color: #BF4904;
+}
+
+
+
+#Buecher{
+    scroll-margin-top: 150px;
+}
+/*.Buch{
     
     background-color: rgb(217, 103, 4,0.3);
     margin:10px;
@@ -117,17 +190,17 @@ nav{
     gap:20px;
 
 
-}
+}*/
 
 .BuchBild{
 
     align-self: center;
+    min-width: 350px;
     width:100%;
     cursor: pointer;
     
-
 }
-.imgContainer{
+/*.imgContainer{
     width:60%;
     height: auto;
     background-color: rgb(217, 103, 4,0.05);
@@ -139,9 +212,9 @@ nav{
 
 
 .txt{
-    
+    font-family:'Ranade-Medium';
     font-size: 1.2rem;
-}
+}*/
 
 .tooltip {
     position: absolute;       /* Tooltip schwebt über der Seite */
@@ -326,12 +399,25 @@ button:active {
     background-color: rgba(255, 255, 255, 0); 
 }
 
+/*-----------------------AKTUELLES-----------------------*/
+#Aktuelles{
+    
+    margin: 30px;
+   
+}
+#neuigkeiten{
+    display:block;
+    
+}
+#neuigtxt{
+    justify-self: center;
+}
 
-
+    
 /*----------------------------KONTAKTBOX-------------------------------------*/
 
 #Kontaktbox{
-    background-color: var(--farbe3);
+    background-color: var(--farbe4);
     height: 500px;
     margin-bottom: 10px;
     padding: 20px;
@@ -343,16 +429,15 @@ button:active {
 }
 
 
-
 /*-----------------------------------ALTERNATIVE BILDSCHIRMGROEßEN-----------------------------------------------*/
 
 
 
 @media (min-width: 800px){
 
-    .txt{
+    /*.txt{
     font-size: 30px;
-    }
+    }*/
 
     #UeberMichContainer{
         margin-top: 0px;
@@ -393,37 +478,47 @@ button:active {
    
     /*-----------------------------------------------------*/
     /*BÜCHER*/
+    
+  
 
-    .Buch{
+
+    /*.Buch{
+        justify-self: center;
         width: 90%;
-        height: 90%;
-        margin:10px;
+        height:400px;
+        margin:20px;
         padding: 20px;
         background-color: rgb(217, 103, 4,0.3);
-        /*backdrop-filter: blur(8px);*/
+        
         display: flex;
         align-items: center;
+        justify-content: space-between;
+        border-radius: 10px;
       
     }
     .txt{
+        width: 60%;
         padding-top: 10px;
         padding-bottom: 10px;
-        padding-left: 25px;
+        padding-left: 100px;
         padding-right: 10px;
 
-        font-size: 1.5rem;;
-    }
+        font-size: 1.3rem;
+        line-height: 1.3em;
+        
+    }*/
     .BuchBild{
-        max-width:100%;
+        width: 100%;
+        max-width:250px; 
+    }
+    /*.imgContainer{
+        margin-left:30px;
         height: auto;
-    }
-    .imgContainer{
-        width: 30%;
-    }
+        width: fit-content;
+        
+    }*/
 
-    #Buch2,#Buch4{
-        flex-direction: row-reverse;
-    }
+   
 
     .modal {
     
@@ -445,19 +540,7 @@ button:active {
             ;
 
     }
-    /*#modal1{
-        grid-template-rows: 20% 5% 40% auto 40% auto;
-            
-    }
-
-    #modal2{
-        grid-template-rows: 20% 5% 40% auto 40% auto;
-        
-    }
-    #modal2box2{
-        align-items: center;
-    }*/
-    
+   
     /*---------------------------------------------MODAL-----------------------------------*/
     .gridbox{
         align-items: center;
@@ -506,7 +589,7 @@ button:active {
     /*-----------------------KONTAKT-----------------------*/
     
     #Kontaktbox{
-
+        height: fit-content;
         display: flex;
         justify-content: center;
         
@@ -526,19 +609,16 @@ button:active {
 
 
 @media (min-width: 1200px){
-    .nav{
-        padding-right: 10%;
-        padding-left: 10%;
-        font-size: 30px;
-
-    }
+   
     h1{
         padding-top: 100px;
         font-size: 60px;
     }
-    .txt{
-        font-size: 1.2rem;
+    h2{
+        font-size: 2.5rem;
     }
+    
+   
     .modal {
    
         grid-template-columns: 400px 30% 20%;
