@@ -239,6 +239,7 @@ section {
         align-items: center;      /* Modal mittig vertikal */
         
         z-index: 9999;   
+        overflow-y: hidden;
         
     }
 .modal {
@@ -256,7 +257,7 @@ section {
     grid-template-columns: 100%;
     
     
-    /*gap:1em;*/
+   
 
     grid-template-areas: 
         'box1'
@@ -267,15 +268,31 @@ section {
         'box6'
         ;
 
-    z-index: 10000;           /* höher als overlay (optional) */
+    z-index: 10000;           /* höher als overlay (optional)*/ 
     overflow-y: auto;
     
+    
+    scrollbar-width: none; /*Scrollbar unsichtbar auf firefox*/
+    
 }
+/*Scrollbar für chrome unsichtbar machen*/
+.modal::-webkit-scrollbar {
+  display: none;
+}
+
 
 #modal1{
     background-color:#663D5B;
     color: rgba(255, 235, 205, 0.77);
     /*grid-template-rows: 20% 50% 7% 50% 1% 10%;*/
+}
+#modal1-title{
+    display: block;
+    
+    
+}
+#modal1-subtitle{
+    justify-self: center;
 }
 #modal2{
     background-color:#1c2d18;
@@ -335,11 +352,13 @@ button:active {
     /*background-color: yellow;*/
     display:flex;
     justify-content: center;
+    
     height: fit-content;
     border-radius: 10px;
 
     padding: 20px;
     margin: 5px;
+    
     
 }
 
@@ -369,6 +388,7 @@ button:active {
 #modal-beschreibung1{
     
     width: 90%;
+    
 
     font-size: 1.3em;
     line-height: 1.2em;
@@ -384,7 +404,7 @@ button:active {
     
 
 }
-#Buchinfos{
+#Buchbestellbutton{
     display: grid;
     
     gap: 5px;
@@ -394,6 +414,15 @@ button:active {
     'p2' 
     'p3'
     'p4';
+}
+ #modal-entstehung{
+        
+    display: flex;
+    flex-direction: column;
+    height:fit-content
+        
+
+        
 }
 #schliessenb{
     background-color: rgba(255, 255, 255, 0); 
@@ -426,18 +455,15 @@ button:active {
 
 #Kontaktaufnahme{
     width: 20%;
+    
 }
 
 
 /*-----------------------------------ALTERNATIVE BILDSCHIRMGROEßEN-----------------------------------------------*/
 
 
-
 @media (min-width: 800px){
 
-    /*.txt{
-    font-size: 30px;
-    }*/
 
     #UeberMichContainer{
         margin-top: 0px;
@@ -526,9 +552,19 @@ button:active {
         color:rgba(255, 235, 205, 0.672);*/
         justify-content: center;
         grid-template-columns: 33% 30% 20%;
-        grid-template-rows: 20% 5% 40% auto 40% auto;
+        grid-template-rows: 
+        auto
+        auto
+        auto
+        auto
+        auto
+        auto
+        ;
+        /*grid-template-rows: 20% 5% 40% auto 40% auto;*/
         width: 90%;
-        height: 90%;
+        height: 90vh;
+        overflow-y: auto;
+        
         gap:0.5em;
         grid-template-areas: 
             'box1 box1 box1'
@@ -538,7 +574,7 @@ button:active {
             'box5 box5 box5'
             'box6 box6 box6'
             ;
-
+        
     }
    
     /*---------------------------------------------MODAL-----------------------------------*/
@@ -546,10 +582,12 @@ button:active {
         align-items: center;
         padding: 20px;
         height: auto;
+        
         /*background-color: rgba(182, 169, 215, 0.4);*/
         /*border-radius: 10px;*/
         
     }
+
     
 
     #modal-cover{
@@ -563,7 +601,7 @@ button:active {
         width: 100%;
         height: 90%;
         align-self:baseline;
-        font-size: 0.9em;
+        font-size: clamp(0.8em,1vw,1.05em);
         line-height: 1.5em;
         
     }
@@ -572,11 +610,11 @@ button:active {
         width: 100%;
         height: 90%;
         align-self:baseline;
-        font-size: 0.9em;
+        font-size: 0.7em;
         line-height: 1.5em;
         
     }
-    #Buchinfos{
+    #Buchbestellbutton{
        
         align-items: center;
         height: fit-content;
@@ -584,7 +622,7 @@ button:active {
         grid-template-areas: 
         'p2 p3 p4';
     }
-    
+   
     
     /*-----------------------KONTAKT-----------------------*/
     
@@ -638,7 +676,8 @@ button:active {
         
         width: 90%;
     
-        font-size: 1.1em;
+        font-size: clamp(1.05em,0.9vw,1.5em);
+        
         line-height: 1.4em;
 
     }

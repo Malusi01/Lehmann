@@ -65,6 +65,8 @@ buch1.addEventListener("click", async () => {
     modal1.innerHTML = html; // ins Modal einsetzen
     ol1.style.display = "flex";
 
+    document.body.style.overflow = 'hidden';
+
     modal1.querySelectorAll(".gridbox").forEach(el => {
     el.style.backgroundColor = "rgba(207,168,160,0.3)";
 
@@ -141,6 +143,7 @@ buch4.addEventListener("click", async () => {
 // schließen
 document.addEventListener("click", (e) => {
     if (e.target.id === "closeModal") {
+        document.body.style.overflow = '';
         ol1.style.display = "none";
         ol2.style.display = "none";
         ol3.style.display = "none";
@@ -150,4 +153,11 @@ document.addEventListener("click", (e) => {
 });
 
 
-
+document.querySelectorAll('.overlay').forEach(overlay => {
+  overlay.addEventListener('click', function (event) {
+    // Wenn direkt auf das Overlay geklickt wurde (nicht auf das Modal)
+    if (event.target === overlay) {
+      overlay.style.display = 'none';
+    }
+  });
+});
