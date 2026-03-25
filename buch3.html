@@ -12,25 +12,45 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
     </head>
-    <body>
-        <div style="grid-area: box1" class="gridbox" class="Buch1grid"><h2 id="modal-title">Dein Vater hat gesessen - <br> Vom Aufwachsen in Krieg und Nachkriegszeit</h2></div>
+    <body id="modal3">
+        <div style="grid-area: box1" class="gridbox Buch3grid" id="modal3-title"><h2 class="modal-title">Adelheid </h2>
+            <p id="modal3-subtitle">Das Geheimnis von Brunshausen</p></div>
 
-        <div style="grid-area: box2" class="gridbox" class="Buch1grid"><img src="resources/adelheid.jpg" id="modal-cover"></div>
-        <div style="grid-area: boxz" class="gridbox" class="Buch1grid"><h3>Buchbeschreibung</h3></div>
-
-        <div style="grid-area: box3" class="gridbox" class="Buch1grid">
-            
-            <p id="modal-beschreibung">Nora wird kurz vor Ausbruch des zweiten Weltkriegs geboren.
-            Die ersten fünf Geschichten erzählen von ihrem Kinderalltag während des Krieges. <br>
-            Von einem Bombensplitter dicht unter dem Auge, von dem Verlust der ersten Schokolade ihres Lebens, <br>
-            von einer überraschenden Geburtstagstorte bei Kriegsende. Sechs Episoden aus der Nachkriegszeit in Hannover zeigen eine Nora zwischen Übermut, <br>
-             Eigensinn und Unsicherheit. Verbotene Streifzüge in zerbombte Häuser, ein halbes Jahr im Nachkriegsengland, als Teenager mit intellektueller Attitüde <br> 
-             im Café und schließlich gegen Ende der Schulzeit erstmals Ferien am Mittelmeer.</p></div>
-
-
-        <div style="grid-area: box4" class="gridbox" class="Buch1grid"></div>
-       <div style="grid-area: box5" class="gridbox" class="Buch1grid"><button id="closeModal">Schließen</button></div>
+        <div style="grid-area: box2" class="gridbox Buch3grid" ><img src="resources/adelheid.jpg" id="modal-cover"></div>
         
-        <script src="buecher.css" async defer></script>
+
+        <div style="grid-area: box3" class="gridbox Buch3grid" >
+            
+            <p id="modal-beschreibung3" class ="modal-beschreibung">Adelheid ist zehn Jahre alt, als sie in die Schule des Klosters Brunshausen kommt.
+            Sie hat sich in den Kopf gesetzt, Buchmalerin zu werden, obwohl eine solche Ausbildung für sie als Tochter des Müllers keineswegs 
+            passend ist. Wir sind schließlich im 13. Jahrhundert!
+            Still und eigensinnig verfolgt Adelheid ihr Ziel. In den Jahren ihrer Ausbildung im Kloster 
+            trifft sie immer wieder auf Geheimniskrämerei der Nonnen, auf Fragen, die nicht beantwortet werden,
+            aber schließlich auch auf das ganz große und gefährliche Geheimnis, das letztlich ihr Leben 
+            verändern wird.</p></div>
+
+        <div style="grid-area: box3-4" class="gridbox Buch3grid technische-details"> 
+            <p>Taschenbuch</p><p>112 Seiten, 7 Abbildungen</p><p>5,99 Euro</p> 
+            <p>ISBN 9783739234786</p></div>
+        <div style="grid-area: box4" class="gridbox Buch3grid"  id="Buchbestellbutton">
+            
+            <!--<p style="grid-area: p2" class="Buchinfosp"><strong>Taschenbuch kartoniert</strong><br>99 Seiten, 11 Abbildungen<br> 6,99 Euro<br>ISBN 9783746006482<br><br></p>
+            <p style="grid-area: p3" class="Buchinfosp"><strong>E-Book</strong><br>ePUB, 2,1MB<br>3,49 Euro<br>ISBN-13: 9783746076201</p>-->
+            
+            <button class ="buttonb3 externalwebsiteb" style="grid-area: p2"  onclick="goToWebsite('amazon', '3')">Amazon</button>
+            <button class ="buttonb3 externalwebsiteb" style="grid-area: p3"  onclick="goToWebsite('thalia', '3')">Thalia</button>
+            <button class ="buttonb3 externalwebsiteb" style="grid-area: p4"  onclick="goToWebsite('bod', '3')">Books on Demand</button>
+
+      
+        </div>
+            
+            
+       <div style="grid-area: box5" class="gridbox Buch3grid modal-entstehung"><h3>Entstehung des Buches</h3><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi placeat tenetur voluptas laboriosam ratione facere nemo, aperiam perferendis soluta. Esse recusandae perspiciatis natus. Et, quasi saepe. Rem ipsa nostrum doloremque. </p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos, quo repellendus nisi placeat molestiae assumenda animi expedita temporibus mollitia repudiandae aperiam architecto beatae modi voluptas quae optio eligendi fugiat qui!</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident similique accusantium voluptate voluptatum libero nemo quam laboriosam alias laborum assumenda esse vero quos, debitis incidunt cumque eos ullam praesentium asperiores?</p></div>
+
+       <div style="grid-area: box6"class="gridbox Buch3grid" id="schliessenb"><button id="closeModal">Schließen</button></div>
+        
+        <script src="main.js" async defer></script>
     </body>
 </html>

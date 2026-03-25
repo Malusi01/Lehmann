@@ -12,25 +12,44 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
     </head>
-    <body>
-        <div style="grid-area: box1" class="gridbox" class="Buch1grid"><h2 id="modal-title">Dein Vater hat gesessen - <br> Vom Aufwachsen in Krieg und Nachkriegszeit</h2></div>
+    <body id="modal4">
+        <div style="grid-area: box1" class="gridbox Buch4grid" id="modal4-title"><h2 
+            class="modal-title">Harzfeger </h2>
+            <p id="modal4-subtitle"></p></div>
 
-        <div style="grid-area: box2" class="gridbox" class="Buch1grid"><img src="resources/harzfeger.jpg" id="modal-cover"></div>
-        <div style="grid-area: boxz" class="gridbox" class="Buch1grid"><h3>Buchbeschreibung</h3></div>
-
-        <div style="grid-area: box3" class="gridbox" class="Buch1grid">
-            
-            <p id="modal-beschreibung">Nora wird kurz vor Ausbruch des zweiten Weltkriegs geboren.
-            Die ersten fünf Geschichten erzählen von ihrem Kinderalltag während des Krieges. <br>
-            Von einem Bombensplitter dicht unter dem Auge, von dem Verlust der ersten Schokolade ihres Lebens, <br>
-            von einer überraschenden Geburtstagstorte bei Kriegsende. Sechs Episoden aus der Nachkriegszeit in Hannover zeigen eine Nora zwischen Übermut, <br>
-             Eigensinn und Unsicherheit. Verbotene Streifzüge in zerbombte Häuser, ein halbes Jahr im Nachkriegsengland, als Teenager mit intellektueller Attitüde <br> 
-             im Café und schließlich gegen Ende der Schulzeit erstmals Ferien am Mittelmeer.</p></div>
-
-
-        <div style="grid-area: box4" class="gridbox" class="Buch1grid"></div>
-       <div style="grid-area: box5" class="gridbox" class="Buch1grid"><button id="closeModal">Schließen</button></div>
+        <div style="grid-area: box2" class="gridbox Buch4grid" ><img src="resources/harzfeger.jpg" id="modal-cover"></div>
         
-        <script src="buecher.css" async defer></script>
+
+        <div style="grid-area: box3" class="gridbox Buch4grid" >
+            
+            <p id="modal-beschreibung4" class ="modal-beschreibung">Leben Hexen unter den Menschen?
+                Leben Menschen unter den Hexen?
+                Gibt es im Harz parallele Welten oder ergänzen sie sich?
+                In dieser Geschichte über Frau Kohrs aus Bad Lauterberg und 
+                ihrer Nichte Susanne kann man endlich mehr darüber erfahren.</p></div>
+
+        <div style="grid-area: box3-4" class="gridbox Buch4grid technische-details"> 
+            <p>Taschenbuch</p><p>64 Seiten, 15 Abbildungen</p><p>5,99 Euro</p> 
+            <p>ISBN 9783842376168</p></div>
+        <div style="grid-area: box4" class="gridbox Buch4grid"  id="Buchbestellbutton">
+            
+            <!--<p style="grid-area: p2" class="Buchinfosp"><strong>Taschenbuch kartoniert</strong><br>99 Seiten, 11 Abbildungen<br> 6,99 Euro<br>ISBN 9783746006482<br><br></p>
+            <p style="grid-area: p3" class="Buchinfosp"><strong>E-Book</strong><br>ePUB, 2,1MB<br>3,49 Euro<br>ISBN-13: 9783746076201</p>-->
+            
+            <button class ="buttonb4 externalwebsiteb" style="grid-area: p2"  onclick="goToWebsite('amazon', '4')">Amazon</button>
+            <button class ="buttonb4 externalwebsiteb" style="grid-area: p3"  onclick="goToWebsite('thalia', '4')">Thalia</button>
+            <button class ="buttonb4 externalwebsiteb" style="grid-area: p4"  onclick="goToWebsite('bod', '4')">Books on Demand</button>
+
+      
+        </div>
+            
+            
+       <div style="grid-area: box5" class="gridbox Buch4grid modal-entstehung"><h3>Entstehung des Buches</h3><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi placeat tenetur voluptas laboriosam ratione facere nemo, aperiam perferendis soluta. Esse recusandae perspiciatis natus. Et, quasi saepe. Rem ipsa nostrum doloremque. </p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos, quo repellendus nisi placeat molestiae assumenda animi expedita temporibus mollitia repudiandae aperiam architecto beatae modi voluptas quae optio eligendi fugiat qui!</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident similique accusantium voluptate voluptatum libero nemo quam laboriosam alias laborum assumenda esse vero quos, debitis incidunt cumque eos ullam praesentium asperiores?</p></div>
+
+       <div style="grid-area: box6"class="gridbox Buch4grid" id="schliessenb"><button id="closeModal">Schließen</button></div>
+        
+        <script src="main.js" async defer></script>
     </body>
 </html>

@@ -56,6 +56,9 @@ h2{
     font-size: 1.5rem;
 
 }
+p{
+    line-height: 1.5em;
+}
 /*--------------------------------NAVIGATIONSBAR--------------------------------------*/
 nav{
     align-items: center;
@@ -178,19 +181,7 @@ section {
 #Buecher{
     scroll-margin-top: 150px;
 }
-/*.Buch{
-    
-    background-color: rgb(217, 103, 4,0.3);
-    margin:10px;
-    padding: 20px;
 
-    display: grid;
-
-    justify-items: center;
-    gap:20px;
-
-
-}*/
 
 .BuchBild{
 
@@ -200,21 +191,7 @@ section {
     cursor: pointer;
     
 }
-/*.imgContainer{
-    width:60%;
-    height: auto;
-    background-color: rgb(217, 103, 4,0.05);
-    padding: 10px;
-}
-.imgContainer:hover{
-    background-color: #BF4904;
-}
 
-
-.txt{
-    font-family:'Ranade-Medium';
-    font-size: 1.2rem;
-}*/
 
 .tooltip {
     position: absolute;       /* Tooltip schwebt über der Seite */
@@ -264,6 +241,7 @@ section {
         'box2'
         'box3'
         'box4'
+        'box3-4'
         'box5'
         'box6'
         ;
@@ -286,28 +264,21 @@ section {
     color: rgba(255, 235, 205, 0.77);
     /*grid-template-rows: 20% 50% 7% 50% 1% 10%;*/
 }
-#modal1-title{
-    display: block;
-    
-    
-}
-#modal1-subtitle{
-    justify-self: center;
-}
+
 #modal2{
     background-color:#1c2d18;
     color: #371A09;
-    /*grid-template-rows: 20% 50% 50% 1% 10%;*/
+    
 }
 #modal3{
-        background-color:#1c2d18;
-    color: #371A09;
-    grid-template-rows: 20% 50% 50% 1% 10%;
+    background-color:#560256;
+    color: #393131;
+    
 }
 #modal4{
-        background-color:#1c2d18;
-    color: #371A09;
-    grid-template-rows: 20% 50% 50% 1% 10%;
+    background-color:#033601;
+    color: #000000;
+    
 }
 button{
 
@@ -315,7 +286,7 @@ button{
     border-radius: 50px;
     cursor: pointer;
     border: 0;
-    background-color: white;
+    background-color: rgb(134, 38, 38);
     box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
@@ -325,21 +296,72 @@ button{
 
 button:hover {
     letter-spacing: 3px;
-    background-color: hsl(261deg 80% 48%);
-    color: hsl(0, 0%, 100%);
-    box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+    /*background-color: #D76706;
+    color: black;
+    box-shadow: #924706 0px 7px 29px 0px;*/
 }
 
 button:active {
     letter-spacing: 3px;
-    background-color: hsl(261deg 80% 48%);
+    /*background-color: #924706;
     color: hsl(0, 0%, 100%);
-    box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+    box-shadow: #924706 0px 0px 0px 0px;*/
     transform: translateY(10px);
     transition: 100ms;
 }
 .buttonb1{
     background-color: rgba(255, 235, 205, 0.77);
+}
+.buttonb1:hover{
+    background-color: #663D5B;
+    color: black;
+    box-shadow: #482b40 0px 7px 29px 0px;
+}
+.buttonb1:active{
+    background-color: #663D5B;
+    color: hsl(0, 0%, 100%);
+    box-shadow: #482b40 0px 0px 0px 0px;
+}
+
+.buttonb2{
+    background-color: rgba(249, 204, 98, 0.77);
+}
+.buttonb2:hover{
+    background-color: #D76706;
+    color: black;
+    box-shadow: #924706 0px 7px 29px 0px;background-color: #D76706;
+    
+}
+.buttonb2:active{
+    background-color: #924706;
+    color: hsl(0, 0%, 100%);
+    box-shadow: #924706 0px 0px 0px 0px;
+}
+.buttonb3{
+    background-color: rgba(255, 235, 205, 0.77);
+}
+.buttonb3:hover{
+    background-color: #ae55c9;
+    color: black;
+    box-shadow: #743886 0px 7px 29px 0px;
+}
+.buttonb3:active{
+    background-color: #743886;
+    color: hsl(0, 0%, 100%);
+    box-shadow: #743886 0px 0px 0px 0px;
+}
+.buttonb4{
+    background-color: rgba(255, 0, 0, 0.449);
+}
+.buttonb4:hover{
+    background-color: #ff0000;
+    color: black;
+    box-shadow: #8e0000 0px 7px 29px 0px;
+}
+.buttonb4:active{
+    background-color: #8e0000;
+    color: hsl(0, 0%, 100%);
+    box-shadow: #924706 0px 0px 0px 0px;
 }
 
 #closeModal{
@@ -362,10 +384,21 @@ button:active {
     
 }
 
-#modal-title{
+.modal-title{
+    display: block;
     font-size: 1.4em;
     line-height: 1.4em;
+    
 }   
+#modal1-title,#modal2-title,#modal3-title,#modal4-title{
+    display: block;
+    
+    
+}
+
+#modal1-subtitle,#modal2-subtitle,#modal3-subtitle,#modal4-subtitle{
+    justify-self: center;
+}
 
 #modal-cover{
     min-width: 200px;
@@ -373,19 +406,11 @@ button:active {
     height: auto;
     display:block;
     align-self: center;
-
-}
-#modal-cover2{
-    min-width: 200px;
-    max-width: 300px;
-    height: auto;
-    display:block;
-    align-self: center;
-
 }
 
 
-#modal-beschreibung1{
+
+#modal-beschreibung1,#modal-beschreibung2,#modal-beschreibung3,#modal-beschreibung4{
     
     width: 90%;
     
@@ -395,14 +420,11 @@ button:active {
     
 
 }
-#modal-beschreibung2{
-    
-    width: 90%;
 
-    font-size: 1.3em;
-    line-height: 1.2em;
-    
-
+.technische-details{
+    display: block;
+    gap: 10px;
+    justify-items: center;
 }
 #Buchbestellbutton{
     display: grid;
@@ -415,14 +437,11 @@ button:active {
     'p3'
     'p4';
 }
- #modal-entstehung{
+.modal-entstehung{
         
     display: flex;
     flex-direction: column;
-    height:fit-content
-        
-
-        
+    height:fit-content;
 }
 #schliessenb{
     background-color: rgba(255, 255, 255, 0); 
@@ -505,54 +524,19 @@ button:active {
     /*-----------------------------------------------------*/
     /*BÜCHER*/
     
-  
 
-
-    /*.Buch{
-        justify-self: center;
-        width: 90%;
-        height:400px;
-        margin:20px;
-        padding: 20px;
-        background-color: rgb(217, 103, 4,0.3);
-        
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        border-radius: 10px;
-      
-    }
-    .txt{
-        width: 60%;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-left: 100px;
-        padding-right: 10px;
-
-        font-size: 1.3rem;
-        line-height: 1.3em;
-        
-    }*/
     .BuchBild{
         width: 100%;
         max-width:250px; 
     }
-    /*.imgContainer{
-        margin-left:30px;
-        height: auto;
-        width: fit-content;
-        
-    }*/
 
-   
 
     .modal {
     
-        /*background-color: #663D5B;
-        color:rgba(255, 235, 205, 0.672);*/
         justify-content: center;
         grid-template-columns: 33% 30% 20%;
         grid-template-rows: 
+        auto
         auto
         auto
         auto
@@ -570,6 +554,7 @@ button:active {
             'box1 box1 box1'
             'box2 box3 box3'
             'box2 box3 box3'
+            'box3-4 box3-4 box3-4'
             'box4 box4 box4'
             'box5 box5 box5'
             'box6 box6 box6'
@@ -596,24 +581,31 @@ button:active {
         height: auto;
 
     }
-    #modal-beschreibung1{
-        
+    .modal-beschreibung{
         width: 100%;
         height: 90%;
         align-self:baseline;
-        font-size: clamp(0.8em,1vw,1.05em);
-        line-height: 1.5em;
         
+        line-height: 1.5em;
+    }
+    #modal-beschreibung1,#modal-beschreibung3{
+        
+        font-size: clamp(0.8em,1.3vw,1.2em);
+        line-height: 1.5em;
+       
     }
     #modal-beschreibung2{
         
-        width: 100%;
-        height: 90%;
-        align-self:baseline;
-        font-size: 0.7em;
+        font-size: clamp(1em,1vw,1.2em);
         line-height: 1.5em;
         
     }
+    #modal-beschreibung4{
+        font-size: clamp(1.2em,1vw,1.4em);
+        line-height: 1.5em;
+    }
+
+    
     #Buchbestellbutton{
        
         align-items: center;
@@ -663,27 +655,23 @@ button:active {
     
     
     }
-    #modal2{
-        grid-template-columns: 20% 30% 30%;
-        grid-template-rows: 20% 7% 50% 10% 20%;
-    }
+    
     #modal-cover{
 
         min-width:70%;
 
     }
-    #modal-beschreibung1{
+    #modal-beschreibung1,#modal-beschreibung3{
         
         width: 90%;
     
-        font-size: clamp(1.05em,0.9vw,1.5em);
+        font-size: clamp(1.2em,0.9vw,1.5em);
         
         line-height: 1.4em;
 
     }
-    #modal2box2{
-        align-items: baseline;
-    }
+    
+   
     
    
     

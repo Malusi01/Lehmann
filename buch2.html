@@ -12,14 +12,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
     </head>
-    <body>
-        <div style="grid-area: box1" class="gridbox" ><h2 id="modal-title2">Was war das für ein Land...</h2><h3>Als Volontärin in Ägypten 1959 bis 1961</h3></div>
+    <body id="modal2">
+        <div style="grid-area: box1" class="gridbox Buch2grid" id="modal2-title"><h2 class="modal-title">Was war das für ein Land </h2>
+            <p id="modal2-subtitle"> Als Volontärin in Ägypten 1959 bis 1961</p></div>
 
-        <div style="grid-area: box2" class="gridbox" ><img src="resources/ägypten.jpg" id="modal-cover2"></div>
+        <div style="grid-area: box2" class="gridbox Buch2grid" ><img src="resources/ägypten.jpg" id="modal-cover"></div>
+        
 
-        <div style="grid-area: box3" class="gridbox">
+        <div style="grid-area: box3" class="gridbox Buch2grid" >
             
-            <p id="modal-beschreibung2">Ägypten 1959.<br>
+            <p id="modal-beschreibung2" class ="modal-beschreibung">Ägypten 1959.<br>
                 Eine junge Frau aus Hannover, zwanzig Jahre alt, neugierig und abenteuerlustig, möchte Arabisch lernen. <br>
                 Sie ist mit einem Dampfer über das Mittelmeer nach Ägypten gefahren, um als Volontärin in einem großen Kinderheim zu arbeiten.<br>
                 Ägypten erlebt damals, unter Präsident Nasser, einen sozialen Aufbruch, von dem man allerdings heute kaum noch Spuren findet.<br>
@@ -29,24 +31,28 @@
                 Achtzehn Monate verbringt sie in dem faszinierenden Land, lernt außer Kairo auch Alexandria und das Nildelta kennen, im Süden Luxor und Assuan und <br>
                 - noch an ihrem ursprünglichen Standort - die berühmte Tempelanlage Abu Simbel.</p></div>
 
+                <div style="grid-area: box3-4" class="gridbox Buch1grid technische-details"> <p>Taschenbuch kartoniert</p><p>271 Seiten, 35 Abbildungen</p><p>12,99 Euro</p> <p>ISBN 9783749407804</p></div>
 
-        <div style="grid-area: box4" class="gridbox Buch1grid"  id="Buchinfos2">
+        <div style="grid-area: box4" class="gridbox Buch2grid"  id="Buchbestellbutton">
             
             <!--<p style="grid-area: p2" class="Buchinfosp"><strong>Taschenbuch kartoniert</strong><br>99 Seiten, 11 Abbildungen<br> 6,99 Euro<br>ISBN 9783746006482<br><br></p>
             <p style="grid-area: p3" class="Buchinfosp"><strong>E-Book</strong><br>ePUB, 2,1MB<br>3,49 Euro<br>ISBN-13: 9783746076201</p>-->
             
-            <button class ="buttonb1 externalwebsiteb" style="grid-area: p2"  onclick="goToWebsite('amazon', '1')">Amazon</button>
-            <button class ="buttonb1 externalwebsiteb" style="grid-area: p3"  onclick="goToWebsite('thalia', '1')">Thalia</button>
-            <button class ="buttonb1 externalwebsiteb" style="grid-area: p4"  onclick="goToWebsite('bod', '1')">Books on Demand</button>
+            <button class ="buttonb2 externalwebsiteb" style="grid-area: p2"  onclick="goToWebsite('amazon', '2')">Amazon</button>
+            <button class ="buttonb2 externalwebsiteb" style="grid-area: p3"  onclick="goToWebsite('thalia', '2')">Thalia</button>
+            <button class ="buttonb2 externalwebsiteb" style="grid-area: p4"  onclick="goToWebsite('bod', '2')">Books on Demand</button>
 
       
         </div>
             
             
-       <div style="grid-area: box5" class="gridbox Buch1grid" ><p>Entstehung des Buches</p></div>
+       <div style="grid-area: box5" class="gridbox Buch2grid modal-entstehung"><h3>Entstehung des Buches</h3><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi placeat tenetur voluptas laboriosam ratione facere nemo, aperiam perferendis soluta. Esse recusandae perspiciatis natus. Et, quasi saepe. Rem ipsa nostrum doloremque. </p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos, quo repellendus nisi placeat molestiae assumenda animi expedita temporibus mollitia repudiandae aperiam architecto beatae modi voluptas quae optio eligendi fugiat qui!</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident similique accusantium voluptate voluptatum libero nemo quam laboriosam alias laborum assumenda esse vero quos, debitis incidunt cumque eos ullam praesentium asperiores?</p>
+        </div>
 
-       <div style="grid-area: box6"class="gridbox Buch1grid" id="schliessenb"><button id="closeModal">Schließen</button></div>
+       <div style="grid-area: box6"class="gridbox Buch2grid" id="schliessenb"><button id="closeModal">Schließen</button></div>
         
-        <script async defer></script>
+        <script src="main.js" async defer></script>
     </body>
 </html>

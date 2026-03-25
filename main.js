@@ -113,7 +113,7 @@ buch3.addEventListener("click", async () => {
    
     
     modal3.querySelectorAll(".gridbox").forEach(el => {
-    el.style.backgroundColor = "rgba(207,168,160,0.3)";
+    el.style.backgroundColor = "#c0a2a2";
     });
     
 
@@ -129,14 +129,12 @@ buch4.addEventListener("click", async () => {
     modal4.innerHTML = html; // ins Modal einsetzen
     ol4.style.display = "flex";
 
-    modal4.style.backgroundColor ="#663D5B";
-    modal4.style.color = "rgba(255, 235, 205, 0.77)";
    
-    
     modal4.querySelectorAll(".gridbox").forEach(el => {
-    el.style.backgroundColor = "rgba(207,168,160,0.3)";
+    el.style.backgroundColor = "#835403";
     });
-    
+    //"rgb(79, 104, 63)"
+    //"#835403d0"
 });
 
 
@@ -157,7 +155,8 @@ document.querySelectorAll('.overlay').forEach(overlay => {
   overlay.addEventListener('click', function (event) {
     // Wenn direkt auf das Overlay geklickt wurde (nicht auf das Modal)
     if (event.target === overlay) {
-      overlay.style.display = 'none';
+        overlay.style.display = 'none';
+        document.body.style.overflow = ''; // Scrollen wieder erlauben
     }
   });
 });
